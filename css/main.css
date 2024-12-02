@@ -1,0 +1,161 @@
+:root
+{
+    --font: "Pacifico", cursive;
+    --main-color:#FEC260;
+    --main-transition:0.5s;
+}
+body
+{
+    background-color: #F7ECDE;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+*::selection
+{
+    background-color: var(--main-color);
+}
+.container
+{
+    overflow: auto;
+}
+.main-title
+{
+    font-family: var(--font);
+    position: relative;
+    width: fit-content;
+    font-size: 3rem;
+}
+
+.main-title::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    height: 40%;
+    width: 100%;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.main-title:hover::before
+{
+    height: 70%;
+
+}
+.sites-title
+{
+    color: transparent;
+    font-family: "Righteous", sans-serif;
+    background-image: linear-gradient(to right,#48A55A,#B3AB49);
+    background-clip: text;
+    background-position: center;
+    background-size: cover;
+}
+.form
+{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+}
+
+
+.form button
+{
+    background-color: #D1512D;
+    transition: var(--main-transition);
+}
+.form button:hover
+{
+    background-color: #BB4120;
+}
+
+table tr
+{
+
+    border-bottom: 1px solid #E4E7EB;
+}
+
+table tbody button.visit
+{
+    background-color: #9EB23B;
+    transition: var(--main-transition);
+
+}
+table tbody button.visit:hover
+{
+
+    background-color: #8A9E23;
+}
+
+table tbody button.delete
+{
+    background-color: #EB1D36;
+    transition: var(--main-transition);
+}
+table tbody button.delete:hover
+{
+    background-color: #D30820;
+}
+
+.light-box-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.rules
+{
+
+    width: 30rem !important;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.2) ;
+}
+
+@media (max-width:767px)
+{
+    .rules
+    {
+        width: 85% !important;
+    }
+
+}
+.rules h3
+{
+    font-family:  "Bree Serif", serif;;
+
+}
+
+.rules .circles div
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    
+
+
+}
+.rules .circles .first
+{
+    background-color: #F15F5D;
+    
+}
+.rules .circles .second
+{
+
+    background-color: #FEBE2E;
+}
+.rules .circles .third
+{
+
+    background-color: #4DB748;
+}
+
+
+
+
+

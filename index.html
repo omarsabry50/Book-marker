@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container position-relative">
+
+        <h1 class="main-title mx-auto mt-5 ">Bookmarker</h1>
+
+        <div class="sites-title d-flex justify-content-center align-items-center mt-5 mb-5 fw-normal">
+            <i class="fa-solid fa-bookmark me-1 lead"></i>
+            <h3 class="h4"> Bookmark your favorite sites</h3>
+            <i class="fa-solid fa-bookmark ms-1 lead"></i>
+        </div>
+        <hr>
+
+        <div class="form mt-5">
+            <div class="site-name mb-4">
+                <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                <input oninput="validation(this)" type="text" class="form-control is-invalid" id="siteName"
+                    placeholder="Bookmark Name">
+            </div>
+
+            <div class="site-name">
+                <label for="siteUrl" class="form-label"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input oninput="validation(this)" type="url" class="form-control is-invalid" id="siteUrl"
+                    placeholder="Website URL">
+            </div>
+            <button type="submit" onclick="addValid();" id="SubmitBtn"
+                class="btn text-white px-5 position-relative start-50 translate-middle-x mt-4">Submit</button>
+        </div>
+        <hr>
+
+        <table id="booksTable" class="w-100 text-center bg-white">
+            <thead>
+                <th class="py-2">Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+
+
+
+            </tbody>
+
+
+        </table>
+
+        <div class="light-box-container w-100 d-none justify-content-center align-items-center">
+            <div class="rules rounded bg-white">
+                <div class="container">
+                    <div class="head d-flex align-items-center justify-content-between">
+                        <div class="circles d-flex mt-4 mb-4">
+                            <div class="first me-2"></div>
+                            <div class="second me-2"></div>
+                            <div class="third"></div>
+
+                        </div>
+                        <button class="me-1 btn"> <i class="fa-solid fa-xmark fa-xl "></i></button>
+
+                    </div>
+
+                    <h3 class="h5 mb-4">Site Name or Url is not valid, Please follow the rules below :</h3>
+                    <p class="fw-normal lead">
+                        <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                        Site name must contain at least 3 characters
+                    </p>
+                    <p class="fw-normal lead"><i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                        Site URL must be a valid one</p>
+                    <p class="fw-normal lead"><i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                        The book was not listed before.</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
